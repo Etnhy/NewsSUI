@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  NewsSUI
+
+  Created by Евгений Маглена on 12.03.2023.
+  
+*/
+
+
+// WelcomeView.
+"Привіт !" = "Hi !";
+"Ти зареєстрован?" = "Are you registered ?";
+"Ні" = "No";
+"Так" = "Yes";
+
+
