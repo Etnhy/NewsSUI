@@ -23,12 +23,11 @@ struct HomePage: View {
             List {
                 Section("Today") {
                     HStack {
-                        Text(.now, style: .date)
-                        Spacer()
                         Text(.now, style: .time)
+                        Spacer()
+                        Text(.now, style: .date)
                     }
                 }
-                .background(Color.clear)
                 
                 Section("News") {
                     NewsCell(
@@ -59,7 +58,7 @@ struct NewsCell: View {
     
     var body: some View {
         HStack {
-            Image(newsImage) // newsImage
+            Image(newsImage)
                 .resizable()
             VStack {
                 Text(newsTitle)

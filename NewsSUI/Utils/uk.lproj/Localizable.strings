@@ -6,3 +6,22 @@
   
 */
 
+
+
+// WelcomeView.
+"To Sign Up" = "До вікна реєстрації";
+"To Sign In" = "До вікна входу";
+
+// SignInView
+"E-mail" = "Поштова скринька";
+"Password" = "Пароль";
+"Sign In" = "Увійти";
+
+
+// SignUpView
+"Repeat password" = "Повторіть пароль";
+"Sign Up" = "Зареєструватися";
+
+// HomePage
+"Today" = "Сьогодні";
+"News" = "Новини";
