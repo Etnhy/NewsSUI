@@ -17,6 +17,7 @@ struct HomeView: View {
             BackgroundView()
             TabView {
                 HomePage()
+                    .environmentObject(HomeViewModel())
                     .tabItem {
                         Label("Home", systemImage: "house")
                             .foregroundColor(.orange)

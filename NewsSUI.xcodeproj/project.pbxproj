@@ -22,6 +22,7 @@
 		7A78AC9629C0ABF8005DAC83 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC9529C0ABF8005DAC83 /* Settings.swift */; };
 		7A78AC9829C0ABFF005DAC83 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC9729C0ABFF005DAC83 /* HomePage.swift */; };
 		7A78AC9A29C0B78A005DAC83 /* ChangeSignUpInButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC9929C0B78A005DAC83 /* ChangeSignUpInButtons.swift */; };
+		7A78AC9C29C0B9CD005DAC83 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC9B29C0B9CD005DAC83 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		7A78AC9529C0ABF8005DAC83 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7A78AC9729C0ABFF005DAC83 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		7A78AC9929C0B78A005DAC83 /* ChangeSignUpInButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSignUpInButtons.swift; sourceTree = "<group>"; };
+		7A78AC9B29C0B9CD005DAC83 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				7A78AC9229C0A991005DAC83 /* HomeView.swift */,
 				7A78AC9529C0ABF8005DAC83 /* Settings.swift */,
 				7A78AC9729C0ABFF005DAC83 /* HomePage.swift */,
+				7A78AC9B29C0B9CD005DAC83 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				7A78AC8C29C0A518005DAC83 /* BackgroundView.swift in Sources */,
 				7A01AE1729BE59CD00185B56 /* WelcomeView.swift in Sources */,
 				7A78AC8829C0A27F005DAC83 /* SignUpView.swift in Sources */,
+				7A78AC9C29C0B9CD005DAC83 /* HomeViewModel.swift in Sources */,
 				7A78AC9329C0A991005DAC83 /* HomeView.swift in Sources */,
 				7A78AC9A29C0B78A005DAC83 /* ChangeSignUpInButtons.swift in Sources */,
 				7A78AC9629C0ABF8005DAC83 /* Settings.swift in Sources */,
