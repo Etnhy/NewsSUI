@@ -19,6 +19,8 @@
 		7A78AC8A29C0A28C005DAC83 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC8929C0A28C005DAC83 /* SignInView.swift */; };
 		7A78AC8C29C0A518005DAC83 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC8B29C0A517005DAC83 /* BackgroundView.swift */; };
 		7A78AC9329C0A991005DAC83 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC9229C0A991005DAC83 /* HomeView.swift */; };
+		7A78AC9629C0ABF8005DAC83 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC9529C0ABF8005DAC83 /* Settings.swift */; };
+		7A78AC9829C0ABFF005DAC83 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC9729C0ABFF005DAC83 /* HomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		7A78AC8B29C0A517005DAC83 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7A78AC9229C0A991005DAC83 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A78AC9429C0AA8B005DAC83 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7A78AC9529C0ABF8005DAC83 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		7A78AC9729C0ABFF005DAC83 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				7A78AC9229C0A991005DAC83 /* HomeView.swift */,
+				7A78AC9529C0ABF8005DAC83 /* Settings.swift */,
+				7A78AC9729C0ABFF005DAC83 /* HomePage.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -303,8 +309,10 @@
 				7A01AE1729BE59CD00185B56 /* WelcomeView.swift in Sources */,
 				7A78AC8829C0A27F005DAC83 /* SignUpView.swift in Sources */,
 				7A78AC9329C0A991005DAC83 /* HomeView.swift in Sources */,
+				7A78AC9629C0ABF8005DAC83 /* Settings.swift in Sources */,
 				7A78AC8A29C0A28C005DAC83 /* SignInView.swift in Sources */,
 				7A01AE1529BE59CD00185B56 /* NewsSUIApp.swift in Sources */,
+				7A78AC9829C0ABFF005DAC83 /* HomePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

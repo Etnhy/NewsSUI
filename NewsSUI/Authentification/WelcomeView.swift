@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct WelcomeView: View {
-     @State var isRegistered: Bool = false
+    @State var isRegistered: Bool = false
     
-   @State var user = "admin"
+    @State var user = ""
+    
     @ViewBuilder
     var body: some View {
         ZStack {
             BackgroundView()
-            VStack {
-                if isRegistered {
-                    SignInView()
-                    ChangeSignUpInButton(isRegistered: $isRegistered)
-                } else {
-                    SignUpView()
-                    ChangeSignUpInButton(isRegistered: $isRegistered)
+            if user == "admin" {
+                HomeView()
+            } else {
+                VStack {
+                    if isRegistered {
+                        SignInView()
+                        ChangeSignUpInButton(isRegistered: $isRegistered)
+                    } else {
+                        SignUpView()
+                        ChangeSignUpInButton(isRegistered: $isRegistered)
+                    }
                 }
             }
         }

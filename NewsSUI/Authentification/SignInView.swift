@@ -14,7 +14,15 @@ struct SignInView: View {
             VStack {
                 TextField("E-mail", text: $email)
                 TextField("Password", text: $password)
-                Button("Sign In", action: {})
+                Button("Sign In", action: {
+                    if email == "admin" && password == "admin" {
+                        let window = UIApplication
+                        .shared
+                        .connectedScenes
+                        .flatMap{($0 as? UIWindowScene)?.windows ?? []}.first { $0.isKeyWindow }
+                        window?.rootViewController = UIHostingController(rootView: HomeView())
+                    }
+                })
             }
             .frame(height: 160)
             .buttonStyle(.bordered)
