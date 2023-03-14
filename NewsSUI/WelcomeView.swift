@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    private var isRegistered: Bool = false
+     @State var isRegistered: Bool = false
     
     @ViewBuilder
     var body: some View {
-        if isRegistered {
-            
-        } else {
-            
+        ZStack {
+            BackgroundView()
+            VStack {
+                if isRegistered {
+                    SignInView()
+                    ChangeSignUpInButton(isRegistered: $isRegistered)
+                } else {
+                    SignUpView()
+                    ChangeSignUpInButton(isRegistered: $isRegistered)
+
+                }
+                
+                
+            }
+
         }
     }
 }
@@ -26,3 +37,12 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+
+struct ChangeSignUpInButton: View {
+    @Binding var isRegistered: Bool
+    var body: some View {
+        Button("to sign in") {
+            isRegistered.toggle()
+        }
+    }
+}
