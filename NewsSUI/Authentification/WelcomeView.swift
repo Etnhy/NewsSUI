@@ -26,6 +26,7 @@ struct WelcomeView: View {
                 
                 
             }
+            
 
         }
     }
@@ -41,7 +42,7 @@ struct ContentView_Previews: PreviewProvider {
 struct ChangeSignUpInButton: View {
     @Binding var isRegistered: Bool
     var body: some View {
-        Button("to sign in") {
+        Button(isRegistered ? "To Sign Up" : "To Sign In") {
             isRegistered.toggle()
         }
     }
