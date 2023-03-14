@@ -9,16 +9,7 @@ import SwiftUI
 
 struct HomePage: View {
     
-//    @State var TEXTimageName: String = "shevchenko"
-//    @State var TESTnewsTitle: String = " News Title"
-//    @State var TESTnewsDescription: String =
-// """
-// Тара́с Григо́рович Шевче́нко — український поет, прозаїк, мислитель, живописець, гравер, етнограф, громадський діяч. Національний герой і символ України. Діяч українського національного руху, член Кирило-Мефодіївського братства.
-// 
-// """
     @EnvironmentObject var viewModel: HomeViewModel
-    
-
     var body: some View {
         GeometryReader { proxy in
             List {
@@ -33,10 +24,6 @@ struct HomePage: View {
                 Section("News") {
                     NewsCell(
                         newsTitle: $viewModel.TESTnewsTitle, newsDescription: $viewModel.TESTnewsDescription, newsImage: $viewModel.TEXTimageName)
-//                    NewsCell(
-//                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
-//                    NewsCell(
-//                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
                 }
             }
             .frame(height: proxy.size.height - 70)

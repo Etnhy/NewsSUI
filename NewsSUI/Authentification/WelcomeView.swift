@@ -10,7 +10,7 @@ import SwiftUI
 struct WelcomeView: View {
     @State var isRegistered: Bool = false
     
-    @State var user = "admin"
+    @State var user = "admin2"
     
     @ViewBuilder
     var body: some View {
