@@ -28,22 +28,9 @@ struct HomePage: View {
                         Text(.now, style: .time)
                     }
                 }
+                .background(Color.clear)
                 
                 Section("News") {
-                    NewsCell(
-                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
-                    NewsCell(
-                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
-                    NewsCell(
-                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
-                    NewsCell(
-                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
-                    NewsCell(
-                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
-                    NewsCell(
-                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
-                    NewsCell(
-                        newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
                     NewsCell(
                         newsTitle: $TESTnewsTitle, newsDescription: $TESTnewsDescription, newsImage: $TEXTimageName)
                     NewsCell(

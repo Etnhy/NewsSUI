@@ -21,15 +21,13 @@ struct HomeView: View {
                         Label("Home", systemImage: "house")
                             .foregroundColor(.orange)
                     }
+                
                 Settings()
                     .tabItem {
                         Label("Settings", systemImage: "gear")
                             .foregroundColor(.orange)
                     }
-                    
-                    
             }
-//            .ignoresSafeArea()
             .tabViewStyle(.page)
             
         }

@@ -16,6 +16,7 @@ struct SignUpView: View {
                 TextField("E-mail", text: $email)
                 TextField("Password", text: $password)
                 TextField("Repeat password", text: $repeatPassword)
+                
                 Button {
                     ///
                 } label: {

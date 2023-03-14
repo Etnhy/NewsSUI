@@ -10,7 +10,7 @@ import SwiftUI
 struct WelcomeView: View {
     @State var isRegistered: Bool = false
     
-    @State var user = ""
+    @State var user = "admin"
     
     @ViewBuilder
     var body: some View {
@@ -40,11 +40,4 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-struct ChangeSignUpInButton: View {
-    @Binding var isRegistered: Bool
-    var body: some View {
-        Button(isRegistered ? "To Sign Up" : "To Sign In") {
-            isRegistered.toggle()
-        }
-    }
-}
+
