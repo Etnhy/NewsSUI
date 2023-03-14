@@ -10,6 +10,7 @@ import SwiftUI
 struct WelcomeView: View {
      @State var isRegistered: Bool = false
     
+   @State var user = "admin"
     @ViewBuilder
     var body: some View {
         ZStack {
@@ -21,13 +22,8 @@ struct WelcomeView: View {
                 } else {
                     SignUpView()
                     ChangeSignUpInButton(isRegistered: $isRegistered)
-
                 }
-                
-                
             }
-            
-
         }
     }
 }

@@ -12,8 +12,6 @@ struct SignUpView: View {
     @State var password: String = ""
     @State var repeatPassword: String = ""
     var body: some View {
-//        ZStack {
-//            BackgroundView()
             VStack {
                 TextField("E-mail", text: $email)
                 TextField("Password", text: $password)
@@ -25,16 +23,15 @@ struct SignUpView: View {
                 }
                 .buttonStyle(.bordered)
             }
-            .frame(height: 300)
+            .frame(height: 160)
             .textFieldStyle(.roundedBorder)
             .padding(16)
         }
-        
-//    }
 }
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
+            .background(Color.orange)
     }
 }

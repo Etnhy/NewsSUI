@@ -16,6 +16,7 @@ struct SignInView: View {
                 TextField("Password", text: $password)
                 Button("Sign In", action: {})
             }
+            .frame(height: 160)
             .buttonStyle(.bordered)
             .textFieldStyle(.roundedBorder)
             .padding(16)
