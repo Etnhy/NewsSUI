@@ -10,25 +10,63 @@ import SwiftUI
 struct HomePage: View {
     
     @EnvironmentObject var viewModel: HomeViewModel
+    
+    @State var isRefresh: Bool = false
     var body: some View {
         GeometryReader { proxy in
-            List {
-                Section("Today") {
-                    HStack {
-                        Text(.now, style: .time)
-                        Spacer()
-                        Text(.now, style: .date)
+            ScrollView {
+                HStack {
+                    Spacer()
+                    Text("News")
+                        .font(.title.bold())
+                        .padding(.leading, 16)
+                    Spacer()
+                    Button {
+                        isRefresh.toggle()
+                        if isRefresh {
+                            viewModel.getNetwork()
+                            isRefresh.toggle()
+                        }
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                            .padding(.trailing,16)
+                    }
+
+                }
+                VStack(alignment: .leading) {
+                    ForEach(viewModel.news, id: \.id){ new in
+                        HStack {
+                            Image(systemName: "house")
+                                .resizable()
+                                .frame(width: 100,height: 100,alignment: .leading)
+                            VStack(alignment: .leading) {
+                                Text(new.title)
+                                    .font(.headline)
+                                Text(new.description)
+                                    .font(.subheadline)
+                                    .lineLimit(4)
+                            }
+                        
+                        }
+                        .frame(width: proxy.size.width - 40, height: 160)
+                        .background(
+                            Color.black.opacity(0.2)
+                                .cornerRadius(16)
+                        )
+                        .onTapGesture {
+                            print(new.id)
+                        }
                     }
                 }
-                
-                Section("News") {
-                    NewsCell(
-                        newsTitle: $viewModel.TESTnewsTitle, newsDescription: $viewModel.TESTnewsDescription, newsImage: $viewModel.TEXTimageName)
-                }
+
+                .padding(16)
             }
-            .frame(height: proxy.size.height - 70)
-            .listStyle(.plain)
-            .padding(16)
+            .onSubmit {
+                viewModel.getNetwork()
+            }
+//            .onAppear {
+//                viewModel.getNetwork()
+//        }
         }
     }
 }

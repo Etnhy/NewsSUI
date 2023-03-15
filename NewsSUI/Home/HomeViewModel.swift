@@ -11,11 +11,20 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     
-    @Published var TEXTimageName: String = "shevchenko"
-    @Published var TESTnewsTitle: String = " News Title"
-    @Published var TESTnewsDescription: String =
- """
- Тара́с Григо́рович Шевче́нко — український поет, прозаїк, мислитель, живописець, гравер, етнограф, громадський діяч. Національний герой і символ України. Діяч українського національного руху, член Кирило-Мефодіївського братства.
- 
- """
+    var network: Network = Network()
+    //GET https://newsapi.org/v2/top-headlines/sources?country=usapiKey=3b7a57f2d0e3400e9193cd86f1ba0fb5
+    @Published var news: [Articles] = []
+
+    
+    func getNetwork() {
+        print("GET NEWS")
+        network.getNews(categories: "") { result in
+            switch result {
+            case .success(let success):
+                self.news = success.articles
+            case .failure(let failure):
+                print(failure)
+            }
+        }
+    }
 }
