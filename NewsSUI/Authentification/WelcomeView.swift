@@ -7,28 +7,42 @@
 
 import SwiftUI
 
+enum Auth {
+    case signIn
+    case signUp
+}
+
 struct WelcomeView: View {
     @State var isRegistered: Bool = false
     
-    @State var user = "admin2"
+    @State var user = "admin"
+    @State var authState = Auth.signIn
     
     @ViewBuilder
     var body: some View {
         ZStack {
             BackgroundView()
-            if user == "admin" {
+            if user == "admin2" {
                 HomeView()
             } else {
                 VStack {
-                    if isRegistered {
+                    switch authState {
+                    case .signIn:
                         SignInView()
-                        ChangeSignUpInButton(isRegistered: $isRegistered)
-                    } else {
+                        Button("To Sign Up") {
+                            authState = Auth.signUp
+                        }
+                    case .signUp:
                         SignUpView()
-                        ChangeSignUpInButton(isRegistered: $isRegistered)
+                        Button("To Sign In") {
+                            authState = Auth.signIn
+                        }
                     }
                 }
+                .foregroundColor(Color.black)
+                .buttonStyle(.bordered)
             }
+
         }
     }
 }
@@ -38,6 +52,4 @@ struct ContentView_Previews: PreviewProvider {
         WelcomeView()
     }
 }
-
-
 

@@ -23,6 +23,8 @@ struct SignInView: View {
                         window?.rootViewController = UIHostingController(rootView: HomeView())
                     }
                 })
+                .foregroundColor(Color.black)
+                .buttonStyle(.bordered)
             }
             .frame(height: 160)
             .buttonStyle(.bordered)
