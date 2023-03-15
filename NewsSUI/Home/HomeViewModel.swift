@@ -11,7 +11,7 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     
-    var network: Network = Network()
+   private var network: Network = Network()
     //GET https://newsapi.org/v2/top-headlines/sources?country=usapiKey=3b7a57f2d0e3400e9193cd86f1ba0fb5
     @Published var news: [Articles] = []
 
@@ -27,4 +27,5 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
+    
 }
