@@ -16,9 +16,9 @@ class HomeViewModel: ObservableObject {
     @Published var news: [Articles] = []
 
     
-    func getNetwork() {
+    func getNetwork(categories: String) {
         print("GET NEWS")
-        network.getNews(categories: "") { result in
+        network.getNews(categories: categories) { result in
             switch result {
             case .success(let success):
                 self.news = success.articles

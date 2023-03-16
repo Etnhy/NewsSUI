@@ -16,7 +16,7 @@ class Network: ObservableObject, NetworkLayer {
     
     
     func getNews(categories: String, completion: @escaping (Result<NewsModel, AFError>) -> ()) {
-        let url = "https://newsapi.org/v2/everything?q=animals&apiKey=3b7a57f2d0e3400e9193cd86f1ba0fb5"
+        let url = "https://newsapi.org/v2/everything?q=\(categories)&apiKey=3b7a57f2d0e3400e9193cd86f1ba0fb5"
         downloadJson(url: url, completion: completion)
         
     }

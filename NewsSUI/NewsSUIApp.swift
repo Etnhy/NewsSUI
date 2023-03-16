@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct NewsSUIApp: App {
+    
+    @AppStorage("appearance") var appearence: Appearance = .automatic
+
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .preferredColorScheme(appearence.getColorScheme())
         }
     }
 }

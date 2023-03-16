@@ -20,9 +20,9 @@ struct HomeView: View {
                     .environmentObject(HomeViewModel())
                     .tabItem {
                         Label("Home", systemImage: "house")
-                            .foregroundColor(.orange)
+                            
+                            .frame(width: 40,height: 30)
                     }
-                
                 Settings()
                     .tabItem {
                         Label("Settings", systemImage: "gear")

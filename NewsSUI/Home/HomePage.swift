@@ -24,20 +24,18 @@ struct HomePage: View {
                     Button {
                         isRefresh.toggle()
                         if isRefresh {
-                            viewModel.getNetwork()
+                            viewModel.getNetwork(categories: "animals")
                             isRefresh.toggle()
                         }
                     } label: {
                         Image(systemName: "arrow.clockwise")
                             .padding(.trailing,16)
                     }
-                    
                 }
                 NewsDisplay(news: $viewModel.news,geometryProxy: proxy)
             }
-            
             .onAppear {
-                viewModel.getNetwork()
+                viewModel.getNetwork(categories: "cars")
             }
         }
     }
