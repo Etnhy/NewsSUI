@@ -30,19 +30,26 @@ struct WelcomeView: View {
                     case .signIn:
                         SignInView()
                         Button("To Sign Up") {
-                            authState = Auth.signUp
+                            withAnimation {
+                                authState = Auth.signUp
+                            }
+                            
                         }
                     case .signUp:
+                        
                         SignUpView()
                         Button("To Sign In") {
-                            authState = Auth.signIn
+                            withAnimation {
+                                authState = Auth.signIn
+                            }
                         }
+                        
                     }
                 }
                 .foregroundColor(Color.black)
                 .buttonStyle(.bordered)
             }
-
+            
         }
     }
 }

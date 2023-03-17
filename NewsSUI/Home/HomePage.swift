@@ -53,6 +53,8 @@ struct NewsDisplay: View {
     @Binding var news: [Articles]
      var geometryProxy: GeometryProxy
     
+    @AppStorage("appearance") var appearance: Appearance = .automatic
+
     var body: some View {
         VStack() {
             ForEach(news, id: \.id){ new in
@@ -71,11 +73,17 @@ struct NewsDisplay: View {
                     }
                 }
                 .frame(height: 160)
-                .background(
-                    Color.black.opacity(0.2)
+                
+                .overlay {
+                    Color.gray.opacity(0.2)
                         .cornerRadius(16)
                         .frame(width: geometryProxy.size.width - 16)
-                )
+                }
+//                .background(
+//                    Color.black
+//                        .cornerRadius(16)
+//                        .frame(width: geometryProxy.size.width - 16)
+//                )
             }
         }
         .padding(16)

@@ -15,8 +15,9 @@ struct NewsSUIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .preferredColorScheme(appearence.getColorScheme())
+//            HomeView()
+//                .preferredColorScheme(appearence.getColorScheme())
+            WelcomeView()
         }
     }
 }

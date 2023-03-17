@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct BackgroundView: View {
+    @AppStorage("appearance") var appearence: Appearance = .automatic
+
     var body: some View {
-        LinearGradient(colors: [.orange,.red,.blue], startPoint: .topLeading, endPoint: .bottomTrailing)
-            .ignoresSafeArea(.all)
+        if appearence.getColorScheme() == .light {
+            LinearGradient(colors: [.orange,.red,.blue], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea(.all)
+        } else {
+            LinearGradient(colors: [.gray,.black,.purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea(.all)
+        }
+
     }
 }
 

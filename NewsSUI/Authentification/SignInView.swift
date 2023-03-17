@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @State var email: String = "admin"
+    @State var password: String = "admin"
     var body: some View {
             VStack {
                 TextField("E-mail", text: $email)
@@ -21,7 +21,7 @@ struct SignInView: View {
                         .connectedScenes
                         .flatMap{($0 as? UIWindowScene)?.windows ?? []}.first { $0.isKeyWindow }
                         window?.rootViewController = UIHostingController(rootView: HomeView())
-                    }
+                    } 
                 })
                 .foregroundColor(Color.black)
                 .buttonStyle(.bordered)

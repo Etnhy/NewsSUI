@@ -13,7 +13,7 @@ struct Settings: View {
 
     
     var body: some View {
-        List {
+        VStack {
             Text("Settings")
                 .font(.largeTitle).bold()
                 .padding(.bottom, 8)
@@ -29,9 +29,15 @@ struct Settings: View {
                 }
             } header: {
                 Text("Appearence")
+                    .multilineTextAlignment(.leading)
+                    
+                    
+                    
             }
-
-        }
+            Spacer()
+        } // VStack
+        .padding(16)
+        .listStyle(.plain)
     }
 }
 

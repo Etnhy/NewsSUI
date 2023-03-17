@@ -8,27 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
-    init() {
-        UITabBar.appearance().backgroundColor = .black
-        UITabBar.appearance().selectedItem?.badgeColor = .orange
-    }
+//    init() {
+//        UITabBar.appearance().backgroundColor = .black
+//        UITabBar.appearance().selectedItem?.badgeColor = .orange
+//    }
     var body: some View {
         ZStack {
             BackgroundView()
-            TabView {
-                HomePage()
-                    .environmentObject(HomeViewModel())
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                            
-                            .frame(width: 40,height: 30)
-                    }
-                Settings()
-                    .tabItem {
-                        Label("Settings", systemImage: "gear")
-                            .foregroundColor(.orange)
-                    }
-            }
+                TabView {
+                    HomePage()
+                        .environmentObject(HomeViewModel())
+                        .tabItem {
+                            Label("Home", systemImage: "house")
+                                
+                                .frame(width: 40,height: 30)
+                        }
+                        .tag(0)
+                    Settings()
+                        .tabItem {
+                            Label("Settings", systemImage: "gear")
+                                .foregroundColor(.orange)
+                        }
+                        .tag(1)
+                }
             .tabViewStyle(.page)
             
         }
