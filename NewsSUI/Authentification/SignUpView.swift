@@ -11,6 +11,10 @@ struct SignUpView: View {
     @State var email: String = ""
     @State var password: String = ""
     @State var repeatPassword: String = ""
+    
+
+    
+    
     var body: some View {
             VStack {
                 TextField("E-mail", text: $email)

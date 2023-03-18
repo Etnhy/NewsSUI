@@ -13,44 +13,73 @@ enum Auth {
 }
 
 struct WelcomeView: View {
-    @State var isRegistered: Bool = false
-    
-    @State var user = "admin"
+//    @State var isRegistered: Bool = false
+//
+//    @State var user = "admin"
     @State var authState = Auth.signIn
-    
+    @EnvironmentObject var appState: AppState
+
     @ViewBuilder
     var body: some View {
-        ZStack {
-            BackgroundView()
-            if user == "admin2" {
-                HomeView()
-            } else {
-                VStack {
-                    switch authState {
-                    case .signIn:
-                        SignInView()
-                        Button("To Sign Up") {
-                            withAnimation {
-                                authState = Auth.signUp
-                            }
-                            
+        if appState.hasAuth {
+            HomeView()
+        } else {
+            VStack {
+                switch authState {
+                case .signIn:
+                    SignInView()
+                    Button("To Sign Up") {
+                        withAnimation {
+                            authState = Auth.signUp
                         }
-                    case .signUp:
-                        
-                        SignUpView()
-                        Button("To Sign In") {
-                            withAnimation {
-                                authState = Auth.signIn
-                            }
-                        }
-                        
+
                     }
+                case .signUp:
+
+                    SignUpView()
+                    Button("To Sign In") {
+                        withAnimation {
+                            authState = Auth.signIn
+                        }
+                    }
+
                 }
-                .foregroundColor(Color.black)
-                .buttonStyle(.bordered)
             }
-            
+            .foregroundColor(Color.black)
+            .buttonStyle(.bordered)
+
         }
+//        ZStack {
+//            BackgroundView()
+//            if user == "admin2" {
+//                HomeView()
+//            } else {
+//                VStack {
+//                    switch authState {
+//                    case .signIn:
+//                        SignInView()
+//                        Button("To Sign Up") {
+//                            withAnimation {
+//                                authState = Auth.signUp
+//                            }
+//
+//                        }
+//                    case .signUp:
+//
+//                        SignUpView()
+//                        Button("To Sign In") {
+//                            withAnimation {
+//                                authState = Auth.signIn
+//                            }
+//                        }
+//
+//                    }
+//                }
+//                .foregroundColor(Color.black)
+//                .buttonStyle(.bordered)
+//            }
+//
+//        }
     }
 }
 

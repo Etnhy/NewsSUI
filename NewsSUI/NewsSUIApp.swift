@@ -11,13 +11,21 @@ import SwiftUI
 struct NewsSUIApp: App {
     
     @AppStorage("appearance") var appearence: Appearance = .automatic
-
-    
+    @ObservedObject var authState = AppState(hasAuth: false)
     var body: some Scene {
         WindowGroup {
 //            HomeView()
 //                .preferredColorScheme(appearence.getColorScheme())
             WelcomeView()
+                .environmentObject(authState)
         }
+    }
+}
+
+class AppState: ObservableObject {
+    @Published var hasAuth: Bool = false
+    
+    init(hasAuth: Bool) {
+        self.hasAuth = hasAuth
     }
 }

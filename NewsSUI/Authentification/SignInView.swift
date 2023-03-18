@@ -10,18 +10,16 @@ import SwiftUI
 struct SignInView: View {
     @State var email: String = "admin"
     @State var password: String = "admin"
+    
+    
+    @EnvironmentObject var authState: AppState
+    
     var body: some View {
             VStack {
                 TextField("E-mail", text: $email)
                 TextField("Password", text: $password)
                 Button("Sign In", action: {
-                    if email == "admin" && password == "admin" {
-                        let window = UIApplication
-                        .shared
-                        .connectedScenes
-                        .flatMap{($0 as? UIWindowScene)?.windows ?? []}.first { $0.isKeyWindow }
-                        window?.rootViewController = UIHostingController(rootView: HomeView())
-                    } 
+                    authState.hasAuth = true
                 })
                 .foregroundColor(Color.black)
                 .buttonStyle(.bordered)
@@ -39,3 +37,4 @@ struct SignInView_Previews: PreviewProvider {
             .background(Color.black)
     }
 }
+

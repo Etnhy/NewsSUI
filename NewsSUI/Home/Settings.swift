@@ -10,6 +10,7 @@ import SwiftUI
 struct Settings: View {
     
     @AppStorage("appearance") var appearance: Appearance = .automatic
+    @EnvironmentObject var authState: AppState
 
     
     var body: some View {
@@ -17,7 +18,9 @@ struct Settings: View {
             Text("Settings")
                 .font(.largeTitle).bold()
                 .padding(.bottom, 8)
-            
+            Button("EXIT") {
+                authState.hasAuth = false
+            }
             Section {
                 VStack {
                     Picker("", selection: $appearance) {
