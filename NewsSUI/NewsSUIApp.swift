@@ -21,11 +21,3 @@ struct NewsSUIApp: App {
         }
     }
 }
-
-class AppState: ObservableObject {
-    @Published var hasAuth: Bool = false
-    
-    init(hasAuth: Bool) {
-        self.hasAuth = hasAuth
-    }
-}

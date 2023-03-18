@@ -21,65 +21,38 @@ struct WelcomeView: View {
 
     @ViewBuilder
     var body: some View {
-        if appState.hasAuth {
-            HomeView()
-        } else {
-            VStack {
-                switch authState {
-                case .signIn:
-                    SignInView()
-                    Button("To Sign Up") {
-                        withAnimation {
-                            authState = Auth.signUp
+        ZStack {
+            BackgroundView()
+            if appState.hasAuth {
+                HomeView()
+            } else {
+                VStack {
+                    switch authState {
+                    case .signIn:
+                        SignInView()
+                        Button("To Sign Up") {
+                            withAnimation {
+                                authState = Auth.signUp
+                            }
+
+                        }
+                    case .signUp:
+
+                        SignUpView()
+                        Button("To Sign In") {
+                            withAnimation {
+                                authState = Auth.signIn
+                            }
                         }
 
                     }
-                case .signUp:
-
-                    SignUpView()
-                    Button("To Sign In") {
-                        withAnimation {
-                            authState = Auth.signIn
-                        }
-                    }
-
                 }
+                .foregroundColor(Color.black)
+                .buttonStyle(.bordered)
+
             }
-            .foregroundColor(Color.black)
-            .buttonStyle(.bordered)
 
         }
-//        ZStack {
-//            BackgroundView()
-//            if user == "admin2" {
-//                HomeView()
-//            } else {
-//                VStack {
-//                    switch authState {
-//                    case .signIn:
-//                        SignInView()
-//                        Button("To Sign Up") {
-//                            withAnimation {
-//                                authState = Auth.signUp
-//                            }
-//
-//                        }
-//                    case .signUp:
-//
-//                        SignUpView()
-//                        Button("To Sign In") {
-//                            withAnimation {
-//                                authState = Auth.signIn
-//                            }
-//                        }
-//
-//                    }
-//                }
-//                .foregroundColor(Color.black)
-//                .buttonStyle(.bordered)
-//            }
-//
-//        }
     }
 }
 

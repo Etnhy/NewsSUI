@@ -11,7 +11,8 @@ struct SignUpView: View {
     @State var email: String = ""
     @State var password: String = ""
     @State var repeatPassword: String = ""
-    
+    @EnvironmentObject var authState: AppState
+
 
     
     
@@ -22,7 +23,8 @@ struct SignUpView: View {
                 TextField("Repeat password", text: $repeatPassword)
                 
                 Button {
-                    ///
+                    authState.hasAuth = true
+
                 } label: {
                     Text("Sign Up")
                 }
@@ -37,6 +39,6 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
-            .background(Color.orange)
+//            .background(Color.orange)
     }
 }

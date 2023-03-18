@@ -9,13 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
 //    init() {
-//        UITabBar.appearance().backgroundColor = .black
-//        UITabBar.appearance().selectedItem?.badgeColor = .orange
+//        UITabBar.appearance().backgroundColor = .white
+////        UITabBar.appearance().selectedItem?.badgeColor = .orange
 //    }
+    
+    @State private var isSelectedTab: Int = 0
+    
     var body: some View {
-        ZStack {
-            BackgroundView()
-                TabView {
+        TabView(selection: $isSelectedTab) {
                     HomePage()
                         .environmentObject(HomeViewModel())
                         .tabItem {
@@ -31,10 +32,6 @@ struct HomeView: View {
                         }
                         .tag(1)
                 }
-            .tabViewStyle(.page)
-            
-        }
-        
     }
 }
 

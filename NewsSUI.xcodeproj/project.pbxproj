@@ -27,6 +27,8 @@
 		7A78AC9C29C0B9CD005DAC83 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78AC9B29C0B9CD005DAC83 /* HomeViewModel.swift */; };
 		7AA805C429C1FECC00399AD5 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA805C329C1FECB00399AD5 /* NewsModel.swift */; };
 		7AA805C729C1FFCC00399AD5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA805C629C1FFCC00399AD5 /* Network.swift */; };
+		7AC3A21A29C59553005FBAE2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3A21929C59553005FBAE2 /* AppState.swift */; };
+		7AC3A21C29C59844005FBAE2 /* DetailNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3A21B29C59844005FBAE2 /* DetailNewsView.swift */; };
 		C92290F90782CEB8DB1EB427 /* Pods_NewsSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25EC20A126592FD3FE724409 /* Pods_NewsSUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		7A78AC9B29C0B9CD005DAC83 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7AA805C329C1FECB00399AD5 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		7AA805C629C1FFCC00399AD5 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7AC3A21929C59553005FBAE2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		7AC3A21B29C59844005FBAE2 /* DetailNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsView.swift; sourceTree = "<group>"; };
 		9BF2AAF92B4D1DEF089C4832 /* Pods-NewsSUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsSUI.debug.xcconfig"; path = "Target Support Files/Pods-NewsSUI/Pods-NewsSUI.debug.xcconfig"; sourceTree = "<group>"; };
 		C508C5E03C9F1FED2E6247CB /* Pods-NewsSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsSUITests.debug.xcconfig"; path = "Target Support Files/Pods-NewsSUITests/Pods-NewsSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBB43202DF66CE244B47C47C /* Pods-NewsSUI-NewsSUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsSUI-NewsSUIUITests.release.xcconfig"; path = "Target Support Files/Pods-NewsSUI-NewsSUIUITests/Pods-NewsSUI-NewsSUIUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 			children = (
 				7A01AE4329BE6BA200185B56 /* Localizable.strings */,
 				7A6D67BB29C396530082F44F /* Appearence.swift */,
+				7AC3A21929C59553005FBAE2 /* AppState.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				7A78AC9529C0ABF8005DAC83 /* Settings.swift */,
 				7A78AC9729C0ABFF005DAC83 /* HomePage.swift */,
 				7A78AC9B29C0B9CD005DAC83 /* HomeViewModel.swift */,
+				7AC3A21B29C59844005FBAE2 /* DetailNewsView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -493,12 +499,14 @@
 				7A01AE1729BE59CD00185B56 /* WelcomeView.swift in Sources */,
 				7A78AC8829C0A27F005DAC83 /* SignUpView.swift in Sources */,
 				7A6D67BC29C396530082F44F /* Appearence.swift in Sources */,
+				7AC3A21C29C59844005FBAE2 /* DetailNewsView.swift in Sources */,
 				7A78AC9C29C0B9CD005DAC83 /* HomeViewModel.swift in Sources */,
 				7AA805C429C1FECC00399AD5 /* NewsModel.swift in Sources */,
 				7AA805C729C1FFCC00399AD5 /* Network.swift in Sources */,
 				7A78AC9329C0A991005DAC83 /* HomeView.swift in Sources */,
 				7A78AC9629C0ABF8005DAC83 /* Settings.swift in Sources */,
 				7A78AC8A29C0A28C005DAC83 /* SignInView.swift in Sources */,
+				7AC3A21A29C59553005FBAE2 /* AppState.swift in Sources */,
 				7A01AE1529BE59CD00185B56 /* NewsSUIApp.swift in Sources */,
 				7A78AC9829C0ABFF005DAC83 /* HomePage.swift in Sources */,
 			);
